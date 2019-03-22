@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A5F8B37-67DD-4234-B3B5-BA41FD1CFBC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TransparentWindowsForms</RootNamespace>
+    <AssemblyName>TransparentWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSkin, Version=16.5.2.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin.Design, Version=16.5.2.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DSkin.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QhControl\entity\PopMoveLocationInfo.cs" />
+    <Compile Include="QhControl\entity\PopLocationInfo.cs" />
+    <Compile Include="QhControl\menutree\MenuTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\menutree\MenuTreeList.Designer.cs">
+      <DependentUpon>MenuTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\monitoreye\CustomDSEyeBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\monitoreye\CustomDSEyeBox.designer.cs">
+      <DependentUpon>CustomDSEyeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\monitoreye\CustomEyeBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\monitoreye\CustomEyeBox.designer.cs">
+      <DependentUpon>CustomEyeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\picturebox\EyeBoxPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\picturebox\EyeBoxPicture.designer.cs">
+      <DependentUpon>EyeBoxPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\picturebox\EyePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QhControl\picturemenulist\EyeBoxDetailInfo.cs" />
+    <Compile Include="QhControl\picturemenulist\EyeBoxDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\picturemenulist\EyeBoxDetailView.designer.cs">
+      <DependentUpon>EyeBoxDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\picturemenulist\EyeBoxPictureList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\picturemenulist\EyeBoxPictureList.designer.cs">
+      <DependentUpon>EyeBoxPictureList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\scrollcombox\CustomDCSelectListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\scrollcombox\CustomDCSelectListBox.Designer.cs">
+      <DependentUpon>CustomDCSelectListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\scrollcombox\CustomScrollbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\scrollcombox\CustomSelectListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QhControl\scrollcombox\CustomSelectListBox.designer.cs">
+      <DependentUpon>CustomSelectListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QhControl\entity\EyeBoxClickInfo.cs" />
+    <Compile Include="QhControl\entity\ListBoxItem.cs" />
+    <Compile Include="QhControl\entity\ListBoxItemCollection.cs" />
+    <Compile Include="QhControl\entity\ListEventItemInfo.cs" />
+    <Compile Include="QhControl\scrollcombox\SelectListBoxInfo.cs" />
+    <Compile Include="QhControl\scrollcombox\UserListBox .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QhControl\tool\Win32.cs" />
+    <Compile Include="QhControl\tool\Win32API.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\HCPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\HCPreview.designer.cs">
+      <DependentUpon>HCPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\MonitorControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\MonitorControlForm.designer.cs">
+      <DependentUpon>MonitorControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\IconFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\IconFrom.designer.cs">
+      <DependentUpon>IconFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\PopMoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\PopMoveForm.designer.cs">
+      <DependentUpon>PopMoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\PopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\PopForm.designer.cs">
+      <DependentUpon>PopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QHForm\TransparentDCFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QHForm\TransparentDCFrom.designer.cs">
+      <DependentUpon>TransparentDCFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHCNetSDK.cs" />
+    <Compile Include="DetectHelper.cs" />
+    <Compile Include="HC\enity\PointAllEntity.cs" />
+    <Compile Include="HC\enity\PointEntity.cs" />
+    <Compile Include="HC\enity\RESULT_CPLUS.cs" />
+    <Compile Include="PlayCtrl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QH_DNN_Helper.cs" />
+    <EmbeddedResource Include="QhControl\menutree\MenuTreeList.resx">
+      <DependentUpon>MenuTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QhControl\picturebox\EyeBoxPicture.resx">
+      <DependentUpon>EyeBoxPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QhControl\scrollcombox\CustomSelectListBox.resx">
+      <DependentUpon>CustomSelectListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\HCPreview.resx">
+      <DependentUpon>HCPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\MonitorControlForm.resx">
+      <DependentUpon>MonitorControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\IconFrom.resx">
+      <DependentUpon>IconFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\PopMoveForm.resx">
+      <DependentUpon>PopMoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\PopForm.resx">
+      <DependentUpon>PopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QHForm\TransparentDCFrom.resx">
+      <DependentUpon>TransparentDCFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\bottom_left_icon.png" />
+    <Content Include="image\bottom_right_icon.png" />
+    <Content Include="image\eyebox_monitor_text_type_4.png" />
+    <Content Include="image\eyebox_monitor_text_type_6.png" />
+    <Content Include="image\full_monitor_bg.png" />
+    <Content Include="image\full_monitor_close.png" />
+    <Content Include="image\full_monitor_line.png" />
+    <Content Include="image\full_monitor_maxmize.png" />
+    <Content Include="image\full_monitor_maxmize_back.png" />
+    <Content Include="image\full_monitor_minimize.png" />
+    <Content Include="image\full_monitor_top_bg.png" />
+    <Content Include="image\menutree_bg.png" />
+    <Content Include="image\top_left_icon.png" />
+    <Content Include="image\top_right_icon.png" />
+    <None Include="image\menutree_videocamera_online.png" />
+    <None Include="image\menu_tree_tab_left.png" />
+    <None Include="image\menu_tree_tab_right.png" />
+    <Content Include="image\my_tree_menu_bg.png" />
+    <Content Include="image\picture_box_car_1.png" />
+    <Content Include="image\picture_menu_list_close.png" />
+    <Content Include="image\picture_menu_list_detail_bg.png" />
+    <Content Include="image\picture_menu_list_bg.png" />
+    <Content Include="image\menutree_left_button.png" />
+    <Content Include="image\menutree_left_close.png" />
+    <Content Include="image\menu_right_button.png" />
+    <Content Include="image\picturebox_play_bg.png" />
+    <Content Include="image\picturebox_cannot_play.png" />
+    <Content Include="image\combox_scroll_check.png" />
+    <Content Include="image\combox_scroll_list_bg.png" />
+    <Content Include="image\eyebox_monitor_text_bg.png" />
+    <Content Include="image\picture_menu_list_setting.png" />
+    <Content Include="image\pop_form_bg.png" />
+    <Content Include="image\query_text_box_bg.png" />
+    <Content Include="image\right_menu_close.png" />
+    <Content Include="image\scroll_thumb.png" />
+    <Content Include="image\scroll_bg.png" />
+    <Content Include="image\combox_list_bg.png" />
+    <Content Include="image\scroll_down.png" />
+    <Content Include="image\eyebox_monitor_circle.png" />
+    <Content Include="image\eyebox_monitor_text_type_1.png" />
+    <Content Include="image\eyebox_monitor_text_type_2.png" />
+    <Content Include="image\eyebox_monitor_text_type_3.png" />
+    <Content Include="image\eyebox_monitor_text_type_5.png" />
+    <Content Include="image\monitor_bg.png" />
+    <Content Include="image\scroll_up.png" />
+    <Content Include="image\combox_scroll_un_check.png" />
+    <Content Include="image\menutree_structure.png" />
+    <Content Include="image\menutree_videocamera.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
