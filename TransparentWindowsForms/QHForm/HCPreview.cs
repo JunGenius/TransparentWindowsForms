@@ -18,7 +18,7 @@ using System.Configuration;
 /*=================================================================
 * Author: QUJUN
 * CreatedTime: 2019/1/9 14:26:23
-* Description: 视频主窗体 111111111111
+* Description: 视频主窗体
 *
 * Dear maintainer:
 * 
