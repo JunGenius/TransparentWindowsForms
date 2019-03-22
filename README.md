@@ -9,3 +9,4 @@
 效果:
 
 
+ ![image](https://github.com/JunGenius/TransparentWindowsForms/blob/master/123.png)
